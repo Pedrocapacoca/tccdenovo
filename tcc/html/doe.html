@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação para Jogos Indies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/doe.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="menu-container">
+               <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+           <nav id="side-menu">
+               <ul>
+                   <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                   <li><a href="lançamentos.html"><i class="fas fa-gamepad"></i> Lançamentos</a></li>
+                   <li><a href="doe.html"><i class="fas fa-star"></i> Apoie</a></li>
+                   <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                   <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+               </ul>
+               <div class="mode-switcher">
+                   <label>
+                       Modo Claro:
+                       <input type="checkbox" id="modeSwitch">
+                       <span class="slider"></span>
+                   </label>
+               </div>
+           </nav>
+       </div>
+       <button class="ui-btn">
+           <a href="index.html">
+           <span>
+             Glitch Games
+           </span>
+         </button>
+       </a>
+         </div>
+       <div class="search-bar">
+           <input type="text" id="search-input" placeholder="Pesquisar...">
+           <button id="search-button" onclick="searchGames()"><i class="fas fa-search"></i></button>
+       </div>
+    </header>
+    
+    <section class="donation-section">
+        <h2>Faça uma Doação para Apoiar Jogos Indies</h2>
+        <p>Apoie desenvolvedores independentes e ajude-os a criar jogos incríveis!</p>
+        
+        <div class="donation-form">
+            <form id="donation-form" onsubmit="return false;">
+                <label for="amount">Valor da Doação:</label>
+                <input type="number" id="amount" min="1" placeholder="Digite o valor em reais" required>
+                
+                <label for="message">Mensagem (opcional):</label>
+                <textarea id="message" placeholder="Deixe uma mensagem para os desenvolvedores"></textarea>
+                
+                <button class="donate-btn" onclick="makeDonation()">Fazer Doação</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="supported-games">
+        <h2>Jogos Indies Apoiados</h2>
+        <div class="games-grid">
+            <!-- informações sobre jogos indie apoiados aqui -->
+            <div class="game-card">
+                <img src="img/hollow.jpg" alt="Nome do Jogo 1">
+                <h3>Hollow Knight</h3>
+            </div>
+            <div class="game-card">
+                <img src="img/celeste.jpg" alt="Nome do Jogo 2">
+                <h3>Celeste</h3>
+            </div>
+            <div class="game-card">
+                <img src="img/undertale.jpg" alt="Nome do Jogo 3">
+                <h3>Undertale</h3>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 GlitchGames. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

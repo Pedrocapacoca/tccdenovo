@@ -1,0 +1,476 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #151D3B;
+    color: #151D3B;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+a:-webkit-any-link {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151D3B;
+    padding: 20px 40px;
+    border-bottom: 5px solid #D82148;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+header h1 {
+    font-size: 2rem;
+    color: #d82148;
+}
+
+#menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #D82148;
+}
+
+.menu-container {
+    position: relative;
+}
+
+nav#side-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    background-color: #E1FFEC;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+nav#side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#side-menu ul li {
+    padding: 10px;
+}
+
+nav#side-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #151D3B;
+    border-bottom: 2px solid #D82148;
+    transition: all 0.3s;
+}
+
+nav#side-menu ul li a:hover {
+    background-color: #D82148;
+    color: #E1FFEC;
+}
+
+/* Switch */
+.mode-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border-top: 1px solid #D82148;
+}
+
+.mode-switcher label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mode-switcher label input {
+    display: none; /* Esconde o input padrão */
+}
+
+.slider {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #D82148;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #E1FFEC;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #d82148;
+}
+
+input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+/* Modo Claro */
+.light-mode {
+    background-color: #FFFFFF;
+    color: #151D3B;
+}
+
+.light-mode header {
+    background-color: #E1FFEC;
+    border-bottom-color: #151D3B;
+}
+
+.light-mode header h1 {
+    color: #151D3B;
+}
+
+.light-mode #menu-toggle {
+    color: #151D3B;
+}
+
+.light-mode nav#side-menu {
+    background-color: #E1FFEC; 
+}
+
+.light-mode nav#side-menu ul li a {
+    color: #151D3B;
+    border-bottom: 2px solid #151D3B;
+}
+
+.light-mode nav#side-menu ul li a:hover {
+    background-color: #D82148;
+    color: #E1FFEC;
+}
+
+.light-mode .contact-section {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.light-mode .form-group input, 
+.light-mode .form-group textarea {
+    background-color: #202A4B; 
+    color: #E1FFEC;
+}
+
+.light-mode footer {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.light-mode .submit-btn, 
+.light-mode .play-now-btn, 
+.light-mode .play-now-btn-small, 
+.light-mode .view-more-btn {
+    background-color: #151D3B;
+    color: #E1FFEC;
+    border: 1px solid #E1FFEC;
+}
+
+.light-mode .submit-btn:hover, 
+.light-mode .play-now-btn:hover, 
+.light-mode .play-now-btn-small:hover, 
+.light-mode .view-more-btn:hover {
+    background-color: #E1FFEC;
+    color: #151D3B;
+    border: 1px solid #151D3B;
+}
+
+.light-mode .contact-section h2{
+    color: #151d3b;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+#search-input {
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #333;
+    font-size: 1rem;
+    transition: all 0.3s;
+    margin-right: 5px;
+    flex-grow: 2;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: #D82148;
+    color: #E1FFEC;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+#search-button:hover {
+    background-color: #E1FFEC;
+    color: #D82148;
+    border: 1px solid #D82148;
+}
+
+/* Seção de Contato */
+.contact-section {
+    padding: 50px 20%;
+    text-align: center;
+    color: #ffff;
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    color: #ffff;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    color: #d82148;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #E1FFEC;
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 150px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #D82148;
+    color: #E1FFEC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #E1FFEC;
+    color: #D82148;
+    border: 1px solid #D82148;
+}
+
+/* Rodapé */
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #151D3B;
+    border-top: 5px solid #D82148;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+    color: #d82148;
+}
+
+/* Botão estilizado */
+
+.ui-btn {
+    --btn-default-bg: rgb(41, 41, 41);
+    --btn-padding: 15px 20px;
+    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #FAC921;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+  }
+  
+  .ui-btn {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: #151D3B;
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+  }
+  
+  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: #151D3B;
+  }
+  
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: #151D3B;
+  }
+  
+  .ui-btn:hover, .ui-btn:focus {
+    background: #151D3B;
+  }
+  
+  .ui-btn:hover span, .ui-btn:focus span {
+    color: #d82148;
+  }
+  
+  .ui-btn:hover span::before, .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+  
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+  
+    5% {
+      content: ".";
+    }
+  
+    10% {
+      content: "^{";
+    }
+  
+    15% {
+      content: "-!";
+    }
+  
+    20% {
+      content: "#$_";
+    }
+  
+    25% {
+      content: "№:0";
+    }
+  
+    30% {
+      content: "#{+.";
+    }
+  
+    35% {
+      content: "@}-?";
+    }
+  
+    40% {
+      content: "?{4@%";
+    }
+  
+    45% {
+      content: "=.,^!";
+    }
+  
+    50% {
+      content: "?2@%";
+    }
+  
+    55% {
+      content: "\;1}]";
+    }
+  
+    60% {
+      content: "?{%:%";
+      right: 0;
+    }
+  
+    65% {
+      content: "|{f[4";
+      right: 0;
+    }
+  
+    70% {
+      content: "{4%0%";
+      right: 0;
+    }
+  
+    75% {
+      content: "'1_0<";
+      right: 0;
+    }
+  
+    80% {
+      content: "{0%";
+      right: 0;
+    }
+  
+    85% {
+      content: "]>'";
+      right: 0;
+    }
+  
+    90% {
+      content: "4";
+      right: 0;
+    }
+  
+    95% {
+      content: "2";
+      right: 0;
+    }
+  
+    100% {
+      content: "";
+      right: 0;
+    }
+  }

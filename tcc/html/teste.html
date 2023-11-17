@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControleCarioca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Cabeçalho: Menu e Barra de Pesquisa -->
+    <header class="header">
+        <div class="header-left">
+            <div class="menu-container">
+               <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav class="side-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="lançamentos.html"><i class="fas fa-gamepad"></i> Lançamentos</a></li>
+                    <li><a href="#"><i class="fas fa-star"></i> Classificados</a></li>
+                    <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+                <div class="mode-switcher">
+                    <label>
+                        Modo Claro:
+                        <input type="checkbox" id="modeSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+        <h1 class="site-title">Controle <span>Carioca</span></h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pesquisar...">
+            <button id="search-button" onclick="searchGames()">Pesquisar</button>
+        </div>
+    </header>
+    <!-- Banner Principal -->
+    <section class="banner">
+        <img src="img/voxiom.jpg" alt="Descrição do Banner">
+        <h2>Lançamento do Mês:</h2>
+        <p>Voxiom.io</p>
+    </section>
+    <!-- Seção de Jogos -->
+    <section class="games-section">
+        <h2>Em Destaque</h2>
+        <div class="games-grid">
+            <!-- Card do Jogo 1 -->
+            <div class="game-card">
+                <img src="img/cookie.jpg" alt="Cookie clicker">
+                <h3>Cookie clicker</h3>
+                <button class="play-now-btn">Jogar Agora</button>
+            </div>
+            <!-- Card do Jogo 2 -->
+            <div class="game-card">
+                <img src="img/shell.jpg" alt="Shell Shockers">
+                <h3>Shell Shockers</h3>
+                <button class="play-now-btn">Jogar Agora</button>
+            </div>
+            <!-- Card do Jogo 3 -->
+            <div class="game-card">
+                <img src="img/evo.jpg" alt="EvoWars.io">
+                <h3>EvoWars.io</h3>
+                <button class="play-now-btn">Jogar Agora</button>
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="todos.html">
+                <button class="view-more-btn">Ver Mais</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 ControleCarioca. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
